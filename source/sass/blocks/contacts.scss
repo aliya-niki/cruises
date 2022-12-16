@@ -1,0 +1,115 @@
+.contacts__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 103px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include vp-1023 {
+    gap: 29px;
+    padding-top: 100px;
+    padding-bottom: 99px;
+  }
+
+  @include vp-767 {
+    flex-direction: column-reverse;
+    gap: 40px;
+    padding-top: 57px;
+    padding-bottom: 61px;
+  }
+}
+
+.contacts__map {
+  flex-shrink: 0;
+  width: 48%;
+  height: 306px;
+
+  background-color: $color-romance;
+  background-image: url("../img/background/bg-map.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/background/bg-map@2x.jpg");
+  }
+
+  @include vp-1023 {
+    height: 335px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 316px;
+  }
+}
+
+.contacts__map iframe {
+  display: block;
+  width: 100%;
+  height: 306px;
+
+  border: none;
+
+  @include vp-1023 {
+    height: 335px;
+  }
+
+  @include vp-767 {
+    height: 316px;
+  }
+}
+
+.contacts__text-container {
+  flex-grow: 1;
+}
+
+.contacts__heading {
+  margin: 0;
+  margin-bottom: 31px;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  @include vp-1023 {
+    margin-bottom: 26px;
+  }
+}
+
+.contacts__street-address {
+  margin: 0;
+  margin-bottom: 23px;
+
+  @include vp-1023 {
+    margin-bottom: 22px;
+  }
+}
+
+.contacts__street-address,
+.contacts__phone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-style: normal;
+}
+
+.contacts__phone {
+  user-select: none;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}
+
+.contacts__icon {
+  flex-shrink: 0;
+
+  &--pin {
+    @include vp-1023 {
+      align-self: start;
+      margin-top: 5px;
+    }
+  }
+}

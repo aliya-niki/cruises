@@ -1,0 +1,47 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  column-gap: 27px;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  @include vp-1023 {
+    column-gap: 22px;
+  }
+
+  @include vp-767 {
+    justify-content: flex-start;
+  }
+}
+
+.socials__link {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}
+
+.socials__icon {
+  @include vp-1023 {
+    &--odnoklassniki {
+      width: 10px;
+      height: 16px;
+    }
+
+    &--dzen {
+      width: 17px;
+      height: 16px;
+    }
+
+    &--reddit {
+      width: 17px;
+      height: 16px;
+    }
+  }
+}

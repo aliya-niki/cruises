@@ -1,0 +1,64 @@
+.advantages-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  padding: 30px 32px 43px 30px;
+
+  background-color: $color-alice-blue;
+
+  @include vp-1023 {
+    padding: 25px 15px 20px 20px;
+  }
+
+  @include vp-767 {
+    row-gap: 11px;
+  }
+}
+
+.advantages-card svg {
+  margin-bottom: 8px;
+
+  @include vp-767 {
+    margin-bottom: 9px;
+  }
+}
+
+.advantages-card--ship svg {
+  @include vp-1023 {
+    width: 21px;
+    height: 26px;
+  }
+}
+
+.advantages-card--all-inclusive svg {
+  @include vp-1023 {
+    width: 27px;
+    height: 26px;
+  }
+}
+
+.advantages-card--boat svg {
+  @include vp-1023 {
+    width: 36px;
+    height: 26px;
+  }
+}
+
+.advantages-card h3 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+
+  @include vp-767 {
+    max-width: 75%;
+  }
+}
+
+.advantages-card p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.4;
+}

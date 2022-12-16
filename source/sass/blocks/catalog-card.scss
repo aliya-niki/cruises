@@ -1,0 +1,135 @@
+.catalog-card {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  min-height: 386px;
+  padding: 30px 25px 23px;
+
+  color: $color-alice-blue;
+
+  @include vp-1023 {
+    padding: 30px 35px 26px;
+  }
+
+  @include vp-767 {
+    padding: 30px 26px 19px;
+  }
+}
+
+.catalog-card:hover,
+.catalog-card:focus-within {
+  flex-direction: column;
+
+  background-color: $color-tangaroa;
+  box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+}
+
+.catalog-card h3 {
+  margin: 0;
+  margin-left: 5px;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  @include vp-1023 {
+    margin-left: 2px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+  }
+}
+
+.catalog-card:hover h3,
+.catalog-card:focus-within h3 {
+  margin-left: 0;
+}
+
+.catalog-card dl {
+  margin: 0;
+  margin-bottom: 6px;
+  margin-top: 14px;
+  overflow-y: scroll;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  opacity: 0;
+}
+
+.catalog-card:hover dl,
+.catalog-card:focus-within dl {
+  opacity: 1;
+}
+
+.catalog-card dt {
+  margin: 0;
+  margin-bottom: 2px;
+
+  font-weight: 500;
+}
+
+.catalog-card dd {
+  margin: 0;
+}
+
+.catalog-card dd:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.catalog-card__btn {
+  margin-bottom: 12px;
+  margin-top: auto;
+  padding-top: 10px;
+  padding-bottom: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: $color-transparent;
+
+  background-color: $color-transparent;
+  opacity: 0;
+
+  @include vp-1023 {
+    margin-bottom: 10px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 17px;
+  }
+}
+
+.catalog-card:hover .catalog-card__btn,
+.catalog-card:focus-within .catalog-card__btn {
+  color: $color-tangaroa;
+
+  background-color: $color-alice-blue;
+  opacity: 1;
+}
+
+.catalog-card__image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+    background-repeat: no-repeat;
+  }
+}
+
+.catalog-card__image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}

@@ -1,0 +1,34 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.header.no-js {
+  @include vp-767 {
+    position: static;
+  }
+}
+
+.header.is-open {
+  @include vp-767 {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      width: 100%;
+      height: calc(100 * var(--vh, 1vh));
+
+      background-color: rgba(0, 43, 102, 0.5);
+    }
+  }
+}

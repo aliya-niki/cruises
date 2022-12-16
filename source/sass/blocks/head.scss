@@ -1,0 +1,84 @@
+.head {
+  position: relative;
+  max-width: 100%;
+
+  color: $color-alice-blue;
+}
+
+.head__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: 50% 50%;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+
+  background-color: $color-san-marino;
+
+  @include vp-1023 {
+    filter: none;
+  }
+
+  @include vp-767 {
+    object-position: 42% 100%;
+  }
+}
+
+.head__inner {
+  padding: 270px 95px 277px;
+
+  @include vp-1023 {
+    padding: 268px 0 274px;
+  }
+
+  @include vp-767 {
+    padding: 176px 0 177px;
+  }
+}
+
+.head__title {
+  margin: 0;
+  margin-bottom: 13px;
+
+  font-size: 54px;
+  line-height: 66px;
+  font-weight: 700;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include vp-1023 {
+    font-size: 50px;
+    line-height: 61px;
+    text-shadow: none;
+  }
+
+  @include vp-767 {
+    margin-bottom: 12px;
+
+    font-size: 36px;
+    line-height: 1.25;
+  }
+}
+
+.head__text {
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 24px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 22px;
+    text-shadow: none;
+  }
+
+  @include vp-767 {
+    margin-right: 60px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
