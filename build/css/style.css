@@ -792,25 +792,14 @@ button,
 }
 
 .head {
-  position: relative;
-  max-width: 100%;
   color: #f9fbfd;
-}
-
-.head__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: 50% 50%;
-  object-position: 50% 50%;
-  -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   background-color: #55799b;
+  background-image: url("../img/background/bg-head.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .head__inner {
@@ -874,21 +863,11 @@ button,
 }
 
 .advantages {
-  position: relative;
-}
-
-.advantages__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
   background-color: #e3ecf6;
+  background-image: url("../img/background/bg-advantages.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .advantages__inner {
@@ -1114,21 +1093,11 @@ button,
 }
 
 .booking {
-  position: relative;
-}
-
-.booking__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: 0% 0%;
-  object-position: 0% 0%;
   background-color: #aad3fa;
+  background-image: url("../img/background/bg-booking.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 0%;
 }
 
 .booking__inner {
@@ -1540,9 +1509,9 @@ button,
     line-height: 17px;
   }
 
-  .head__image {
-    -webkit-filter: none;
-    filter: none;
+  .head {
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
 
   .head__inner {
@@ -1640,9 +1609,8 @@ button,
     margin-bottom: 10px;
   }
 
-  .booking__background {
-    -o-object-position: 85% 95%;
-    object-position: 85% 95%;
+  .booking {
+    background-position: 85% 95%;
   }
 
   .booking__inner {
@@ -1941,9 +1909,9 @@ button,
     line-height: 22px;
   }
 
-  .head__image {
-    -o-object-position: 42% 100%;
-    object-position: 42% 100%;
+  .head {
+    background-position: 45% 0%;
+    background-image: url("../img/background/bg-head-tablet.jpg");
   }
 
   .head__inner {
@@ -2033,9 +2001,8 @@ button,
     margin-bottom: 17px;
   }
 
-  .booking__background {
-    -o-object-position: 55% 0%;
-    object-position: 55% 0%;
+  .booking {
+    background-position: 57% 0%;
   }
 
   .booking__inner {
@@ -2132,6 +2099,12 @@ button,
   }
 }
 
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .head {
+    background-image: url("../img/background/bg-head-tablet@2x.jpg");
+  }
+}
+
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
@@ -2161,6 +2134,18 @@ button,
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .head {
+    background-image: url("../img/background/bg-head@2x.jpg");
+  }
+
+  .advantages {
+    background-image: url("../img/background/bg-advantages@2x.jpg");
+  }
+
+  .booking {
+    background-image: url("../img/background/bg-booking@2x.jpg");
+  }
+
   .contacts__map {
     background-image: url("../img/background/bg-map@2x.jpg");
   }
