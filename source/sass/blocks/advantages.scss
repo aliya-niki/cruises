@@ -1,12 +1,19 @@
 .advantages {
-  background-color: $color-solitude;
-  background-image: url("../img/background/bg-advantages.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  position: relative;
+}
 
-  @include retina {
-    background-image: url("../img/background/bg-advantages@2x.jpg");
+.advantages__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  @include vp-767 {
+    object-position: 0% 0%;
   }
 }
 

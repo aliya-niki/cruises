@@ -147,15 +147,11 @@
     position: relative;
     left: 0;
 
-    grid-template-columns: min-content auto;
-    grid-template-rows: auto;
-
     & .main-nav__logo {
       align-self: start;
     }
 
     & .main-nav__list {
-      grid-column: 2/3;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-auto-flow: row;

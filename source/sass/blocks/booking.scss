@@ -1,20 +1,25 @@
 .booking {
-  background-color: $color-pale-cornflower-blue;
-  background-image: url("../img/background/bg-booking.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0% 0%;
+  position: relative;
+}
 
-  @include retina {
-    background-image: url("../img/background/bg-booking@2x.jpg");
-  }
+.booking__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: 0% 0%;
+  background-color: $color-pale-cornflower-blue;
 
   @include vp-1023 {
-    background-position: 85% 95%;
+    object-position: 85% 95%;
   }
 
   @include vp-767 {
-    background-position: 57% 0%;
+    object-position: 57% 0%;
   }
 }
 

@@ -1,28 +1,30 @@
 .head {
+  position: relative;
+  max-width: 100%;
+
   color: $color-alice-blue;
+}
+
+.head__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: 50% 50%;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 
   background-color: $color-san-marino;
-  background-image: url("../img/background/bg-head.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-
-  @include retina {
-    background-image: url("../img/background/bg-head@2x.jpg");
-  }
 
   @include vp-1023 {
-    box-shadow: none;
+    filter: none;
   }
 
   @include vp-767 {
-    background-position: 45% 0%;
-    background-image: url("../img/background/bg-head-tablet.jpg");
-
-    @include retina {
-      background-image: url("../img/background/bg-head-tablet@2x.jpg");
-    }
+    object-position: 42% 100%;
   }
 }
 

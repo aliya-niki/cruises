@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Круизы в Антарктику">
     <title>Круизы в Антарктику</title>
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/main.min.js" as="script">
     <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="wrapper">
@@ -47,6 +49,11 @@
       </header>
       <main>
         <section class="head">
+          <picture>
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-head.webp 1x, img/bg-head@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-head-tablet.webp 1x, img/bg-head-tablet@2x.webp 2x">
+            <img class="head__image" width="1366" height="1013" src="img/bg-head.jpg" srcset="img/bg-head@2x.jpg 2x" alt="Фотография Антарктики.">
+          </picture>
           <div class="container">
             <div class="head__inner">
               <h1 class="head__title">Круизы в&nbsp;Антарктику</h1>
@@ -65,12 +72,18 @@
             <div class="intro__image-container">
               <picture>
                 <source type="image/webp" srcset="img/penguins.webp 1x, img/penguins@2x.webp 2x">
-                <img src="img/penguins.jpg" srcset="img/penguins@2x.jpg 2x" width="560" height="301" alt="Фотография пингвинов.">
+                <img src="img/penguins.jpg" srcset="img/penguins@2x.jpg 2x" width="560" height="301" alt="Фотография пингвинов." loading="lazy">
               </picture>
             </div>
           </div>
         </section>
         <section class="advantages" id="advantages">
+          <picture>
+            <source type="image/webp" media="min-width: 768px" srcset="img/bg-advantages.webp 1x, img/bg-advantages@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-advantages-tablet.webp 1x, img/bg-advantages-tablet@2x.webp 2x">
+            <img class="advantages__background" src="img/bg-advantages.jpg" srcset="img/bg-advantages@2x.jpg 2x"
+              width="1366" height="863" alt="Фотография ледников." loading="lazy">
+          </picture>
           <div class="container">
             <div class="advantages__inner">
               <h2 class="advantages__title">Преимущества</h2>
@@ -118,7 +131,7 @@
                   <div class="catalog-card__image-container">
                     <picture>
                       <source type="image/webp" srcset="img/catalog/cruises-astoria.webp 1x, img/catalog/cruises-astoria@2x.webp 2x">
-                      <img src="img/catalog/cruises-astoria.jpg" srcset="img/catalog/cruises-astoria@2x.jpg 2x" width="557" height="386" alt="Карточка круиза Астория.">
+                      <img src="img/catalog/cruises-astoria.jpg" srcset="img/catalog/cruises-astoria@2x.jpg 2x" width="557" height="386" alt="Карточка круиза Астория." loading="lazy">
                     </picture>
                   </div>
                   <h3>Круиз &#8220;Астория&#8221;</h3>
@@ -140,7 +153,7 @@
                   <div class="catalog-card__image-container">
                     <picture>
                       <source type="image/webp" srcset="img/catalog/cruises-minion.webp 1x, img/catalog/cruises-minion@2x.webp 2x">
-                      <img src="img/catalog/cruises-minion.jpg" srcset="img/catalog/cruises-minion@2x.jpg 2x" width="692" height="519" alt="Карточка круиза Элайн.">
+                      <img src="img/catalog/cruises-minion.jpg" srcset="img/catalog/cruises-minion@2x.jpg 2x" width="692" height="519" alt="Карточка круиза Элайн." loading="lazy">
                     </picture>
                   </div>
                   <h3>Круиз &#8220;Элайн&#8221;</h3>
@@ -162,7 +175,7 @@
                   <div class="catalog-card__image-container">
                     <picture>
                       <source type="image/webp" srcset="img/catalog/cruises-atlantis.webp 1x, img/catalog/cruises-atlantis@2x.webp 2x">
-                      <img src="img/catalog/cruises-atlantis.jpg" srcset="img/catalog/cruises-atlantis@2x.jpg 2x" width="514" height="386" alt="Карточка круиза Атлантис.">
+                      <img src="img/catalog/cruises-atlantis.jpg" srcset="img/catalog/cruises-atlantis@2x.jpg 2x" width="514" height="386" alt="Карточка круиза Атлантис." loading="lazy">
                     </picture>
                   </div>
                   <h3>Круиз &#8220;Атлантис&#8221;</h3>
@@ -184,7 +197,7 @@
                   <div class="catalog-card__image-container">
                     <picture>
                       <source type="image/webp" srcset="img/catalog/cruises-odysseus.webp 1x, img/catalog/cruises-odysseus@2x.webp 2x">
-                      <img src="img/catalog/cruises-odysseus.jpg" srcset="img/catalog/cruises-odysseus@2x.jpg 2x" width="476" height="454" alt="Карточка круиза Одиссей.">
+                      <img src="img/catalog/cruises-odysseus.jpg" srcset="img/catalog/cruises-odysseus@2x.jpg 2x" width="476" height="454" alt="Карточка круиза Одиссей." loading="lazy">
                     </picture>
                   </div>
                   <h3>Круиз &#8220;Одиссей&#8221;</h3>
@@ -206,7 +219,7 @@
                   <div class="catalog-card__image-container">
                     <picture>
                       <source type="image/webp" srcset="img/catalog/cruises-olympia.webp 1x, img/catalog/cruises-olympia@2x.webp 2x">
-                      <img src="img/catalog/cruises-olympia.jpg" srcset="img/catalog/cruises-olympia@2x.jpg 2x" width="512" height="446" alt="Карточка круиза Олимпия.">
+                      <img src="img/catalog/cruises-olympia.jpg" srcset="img/catalog/cruises-olympia@2x.jpg 2x" width="512" height="446" alt="Карточка круиза Олимпия." loading="lazy">
                     </picture>
                   </div>
                   <h3>Круиз &#8220;Олимпия&#8221;</h3>
@@ -228,7 +241,7 @@
                   <div class="catalog-card__image-container">
                     <picture>
                       <source type="image/webp" srcset="img/catalog/cruises-aurora.webp 1x, img/catalog/cruises-aurora@2x.webp 2x">
-                      <img src="img/catalog/cruises-aurora.jpg" srcset="img/catalog/cruises-aurora@2x.jpg 2x" width="470" height="386" alt="Карточка круиза Аврора.">
+                      <img src="img/catalog/cruises-aurora.jpg" srcset="img/catalog/cruises-aurora@2x.jpg 2x" width="470" height="386" alt="Карточка круиза Аврора." loading="lazy">
                     </picture>
                   </div>
                   <h3>Круиз &#8220;Аврора&#8221;</h3>
@@ -250,7 +263,7 @@
                   <div class="catalog-card__image-container">
                     <picture>
                       <source type="image/webp" srcset="img/catalog/cruises-leonor.webp 1x, img/catalog/cruises-leonor@2x.webp 2x">
-                      <img src="img/catalog/cruises-leonor.jpg" srcset="img/catalog/cruises-leonor@2x.jpg 2x" width="498" height="386" alt="Карточка круиза Леонор.">
+                      <img src="img/catalog/cruises-leonor.jpg" srcset="img/catalog/cruises-leonor@2x.jpg 2x" width="498" height="386" alt="Карточка круиза Леонор." loading="lazy">
                     </picture>
                   </div>
                   <h3>Круиз &#8220;Леонор&#8221;</h3>
@@ -272,7 +285,7 @@
                   <div class="catalog-card__image-container">
                     <picture>
                       <source type="image/webp" srcset="img/catalog/cruises-minion.webp 1x, img/catalog/cruises-minion@2x.webp 2x">
-                      <img src="img/catalog/cruises-minion.jpg" srcset="img/catalog/cruises-minion@2x.jpg 2x" width="692" height="519" alt="Карточка круиза Минион-1.">
+                      <img src="img/catalog/cruises-minion.jpg" srcset="img/catalog/cruises-minion@2x.jpg 2x" width="692" height="519" alt="Карточка круиза Минион-1." loading="lazy">
                     </picture>
                   </div>
                   <h3>Круиз &#8220;Минион&nbsp;&#45; 1&#8221;</h3>
@@ -293,6 +306,12 @@
           </div>
         </section>
         <section class="booking">
+          <picture>
+            <source type="image/webp" media="min-width: 768px" srcset="img/bg-booking.webp 1x, img/bg-booking@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-booking-tablet.webp 1x, img/bg-booking-tablet@2x.webp 2x">
+            <img class="booking__background" src="img/bg-booking.jpg" srcset="img/bg-booking@2x.jpg 2x"
+              width="1366" height="914" alt="Фотография ледников." loading="lazy">
+          </picture>
           <div class="container">
             <div class="booking__inner">
               <div class="booking__heading">
@@ -345,7 +364,7 @@
             <div class="contacts__text-container">
               <p class="contacts__heading">У&nbsp;вас ещё остались вопросы или сомнения?
                 Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
-              <address>
+              <address class="contacts__address">
                 <p class="contacts__street-address">
                   <svg class="contacts__icon contacts__icon--pin" width="18" height="22">
                     <use href="img/sprite.svg#icon-pin"></use>
@@ -376,16 +395,16 @@
             </a>
             <ul class="footer__nav site-nav">
               <li class="site-nav__item">
-                <a class="site-nav__link" href="#">Преимущества</a>
+                <a class="site-nav__link" href="#advantages">Преимущества</a>
               </li>
               <li class="site-nav__item">
                 <a class="site-nav__link" href="#">Направления</a>
               </li>
               <li class="site-nav__item">
-                <a class="site-nav__link" href="#">Ближайшие круизы</a>
+                <a class="site-nav__link" href="#catalog">Ближайшие круизы</a>
               </li>
               <li class="site-nav__item">
-                <a class="site-nav__link" href="#">Контакты</a>
+                <a class="site-nav__link" href="#contacts">Контакты</a>
               </li>
             </ul>
             <ul class="footer__socials socials">
